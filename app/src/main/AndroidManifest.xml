@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permisos necesarios -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Emprende"
+        tools:targetApi="31">
+
+        <!-- Configuración del FileProvider para manejar archivos compartidos -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.emprende.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Meta-datos para la API de Google Maps -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDbNCSUQqL8_ON3dXHOJ__3GYOzj21svu8" /> <!-- Utiliza una referencia a local.properties -->
+
+        <!-- Activities -->
+        <activity
+            android:name=".Presentacion.PClienteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Presentacion.PUbicacionMapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Presentacion.PRepartidorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Presentacion.PProductoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Presentacion.PCatalogoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Presentacion.PDetalleCatalogo"
+            android:exported="false" />
+        <activity
+            android:name=".Presentacion.PProformaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Presentacion.PEntregaActivity"
+            android:exported="false" />
+
+        <!-- MainActivity que lanza la aplicación -->
+        <activity
+            android:name=".Presentacion.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

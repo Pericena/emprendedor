@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:background="@drawable/icproducto_bg"
+    android:orientation="vertical"
+    tools:context=".Presentacion.PProductoActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewid"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="12dp"
+            android:text="id"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtid"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="Ingresar ID"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="#090D28"
+            android:textColorHint="#181B3A"
+            android:textColorLink="#181B3A" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/textViewnombre"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="12dp"
+            android:text="Nombre"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtnombre"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+
+            android:hint="Ingresar Nombre del Producto"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="#090D28"
+            android:textColorHint="#181B3A"
+            android:textColorLink="#181B3A" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/textViewtelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Descripcion"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="231dp" />
+
+        <EditText
+            android:id="@+id/txtdescripcion"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="Ingresar Descripcion del Producto"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="#090D28"
+            android:textColorHint="#181B3A"
+            android:textColorLink="#181B3A" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btAgregar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#181B3A"
+            android:drawableRight="@drawable/agregar"
+            android:text="Agregar"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:cornerRadius="5dp"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="322dp" />
+
+        <Button
+            android:id="@+id/btModificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#181B3A"
+            android:drawableRight="@drawable/editar"
+            android:text="Modificar"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:cornerRadius="5dp"
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="318dp" />
+
+        <Button
+            android:id="@+id/btEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#181B3A"
+            android:drawableRight="@drawable/eliminar"
+            android:text="Eliminar"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:cornerRadius="5dp"
+            tools:layout_editor_absoluteX="299dp"
+            tools:layout_editor_absoluteY="318dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btimagen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#181B3A"
+            android:text="Subir Imagen"
+
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:cornerRadius="5dp"
+            tools:layout_editor_absoluteX="299dp"
+            tools:layout_editor_absoluteY="318dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/repartidor" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/lista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</LinearLayout>
